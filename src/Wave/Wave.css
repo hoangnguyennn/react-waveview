@@ -1,0 +1,16 @@
+.wave__group {
+  overflow: hidden;
+  position: relative;
+}
+
+.wave__item {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes wave__animate {
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}

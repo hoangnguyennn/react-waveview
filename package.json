@@ -1,0 +1,38 @@
+{
+  "name": "react-waveview",
+  "version": "0.0.1",
+  "description": "WaveView for React",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangnguyennn/react-waveview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangnguyennn/react-waveview/issues"
+  },
+  "homepage": "https://github.com/hoangnguyennn/react-waveview#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@types/jest": "^26.0.23",
+    "@types/react": "^17.0.9",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.2",
+    "typescript": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
