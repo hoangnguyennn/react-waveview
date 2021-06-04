@@ -47,15 +47,15 @@ const MyComponent = () => (
 
 ```
 
-| name                 | type           | description                               | default               | required |
-| -------------------- | -------------- | ----------------------------------------- | --------------------- | -------- |
-| H                    | number         | Baseline height                           | -                     | true     |
-| waveParams           | WaveItem[]     | List of waves                             | -                     | true     |
-| animated             | boolean        | If `true`, animation when mounted         | false                 | false    |
-| easing               | TimingFunction | Specifies the speed curve of an animation | TimingFunction.LINEAR | false    |
-| speed                | number         | Base duration in ms of one wave cycle     | 5000                  | false    |
-| speedIncreasePerWave | number         | Increase in speed in ms per each wave     | 1000                  | false    |
-| className            | string         | `className` for wave container            | -                     | false    |
+| name                 | type                              | description                               | default               | required |
+| -------------------- | --------------------------------- | ----------------------------------------- | --------------------- | -------- |
+| H                    | number                            | Baseline height                           | -                     | true     |
+| waveParams           | [WaveItem[]](#WaveItem)           | List of waves                             | -                     | true     |
+| animated             | boolean                           | If `true`, animation when mounted         | false                 | false    |
+| easing               | [TimingFunction](#TimingFunction) | Specifies the speed curve of an animation | TimingFunction.LINEAR | false    |
+| speed                | number                            | Base duration in ms of one wave cycle     | 5000                  | false    |
+| speedIncreasePerWave | number                            | Increase in speed in ms per each wave     | 1000                  | false    |
+| className            | string                            | `className` for wave container            | -                     | false    |
 
 ### Interfaces and Enums
 
