@@ -1,6 +1,6 @@
 {
   "name": "react-waveview",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "WaveView for React",
   "main": "./lib/index.js",
   "scripts": {
