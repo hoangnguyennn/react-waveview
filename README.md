@@ -55,6 +55,7 @@ const MyComponent = () => (
 | easing               | TimingFunction | Specifies the speed curve of an animation | TimingFunction.LINEAR | false    |
 | speed                | number         | Base duration in ms of one wave cycle     | 5000                  | false    |
 | speedIncreasePerWave | number         | Increase in speed in ms per each wave     | 1000                  | false    |
+| className            | string         | `className` for wave container            | -                     | false    |
 
 ### Interfaces and Enums
 
