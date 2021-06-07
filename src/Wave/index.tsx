@@ -1,10 +1,11 @@
-import { PureComponent } from 'react';
+import { CSSProperties, PureComponent } from 'react';
 import { TimingFunction, WaveItem } from '../interfaces';
 
 import './Wave.css';
 
 type WaveProps = {
-  className?: string | undefined;
+  className?: string;
+  style?: CSSProperties;
   H: number;
   waveParams: WaveItem[];
   animated: boolean;
@@ -35,7 +36,7 @@ class Wave extends PureComponent<WaveProps, WaveState> {
   }
 
   render() {
-    const { className } = this.props;
+    const { className, style } = this.props;
     const { H, waveParams } = this.state;
 
     const waves = [];
@@ -63,7 +64,11 @@ class Wave extends PureComponent<WaveProps, WaveState> {
       waves.push(wave);
     }
 
-    return <div className={`wave__group ${className}`}>{waves}</div>;
+    return (
+      <div style={style} className={`wave__group ${className}`}>
+        {waves}
+      </div>
+    );
   }
 
   startAnim() {

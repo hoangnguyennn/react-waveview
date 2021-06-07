@@ -1,6 +1,9 @@
 .wave__group {
   overflow: hidden;
   position: relative;
+
+  width: 100px;
+  height: 100px;
 }
 
 .wave__item {
