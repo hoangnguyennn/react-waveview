@@ -56,6 +56,7 @@ const MyComponent = () => (
 | speed                | number                            | Base duration in ms of one wave cycle     | 5000                  | false    |
 | speedIncreasePerWave | number                            | Increase in speed in ms per each wave     | 1000                  | false    |
 | className            | string                            | `className` for wave container            | -                     | false    |
+| style                | `CSSProperties`                   | `style` for wave container                | -                     | false    |
 
 ### Interfaces and Enums
 
