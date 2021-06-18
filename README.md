@@ -30,6 +30,8 @@ const MyComponent = () => (
 );
 ```
 
+[Full view on CodeSandbox](https://codesandbox.io/s/react-waveview-example-4s9w6)
+
 ### Props
 
 ```
