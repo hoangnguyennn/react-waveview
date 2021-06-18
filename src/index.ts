@@ -1,4 +1,4 @@
-export { default } from './Wave';
+export { default } from './Wave/new';
 
 export { TimingFunction } from './interfaces';
 
