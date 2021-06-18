@@ -2,6 +2,10 @@
 
 Wave view component in React
 
+## Screenshot
+
+![wave.png](https://raw.githubusercontent.com/hoangnguyennn/react-waveview/master/screenshot/wave.png)
+
 ## Install
 
 ```bash
