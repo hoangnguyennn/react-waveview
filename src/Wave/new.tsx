@@ -24,8 +24,6 @@ const Wave: FC<WaveProps> = ({
   speedIncreasePerWave = 1000,
   easing = TimingFunction.LINEAR
 }) => {
-  const [_animated, setAnimated] = useState(animated);
-
   const waves: JSX.Element[] = [];
 
   for (let i = 0; i < waveParams.length; i++) {
@@ -59,8 +57,6 @@ const Wave: FC<WaveProps> = ({
         item.style.animation = '';
       }
     }
-
-    setAnimated(false);
   };
 
   const startAnim = () => {
@@ -80,13 +76,15 @@ const Wave: FC<WaveProps> = ({
         item.style.animation = animation;
       }
     }
-
-    setAnimated(true);
   };
 
   useEffect(() => {
-    _animated && startAnim();
-  }, []);
+    if (animated) {
+      startAnim();
+    } else {
+      stopAnim();
+    }
+  }, [animated, stopAnim, startAnim]);
 
   return (
     <div style={style} className={`wave__group ${className}`}>
