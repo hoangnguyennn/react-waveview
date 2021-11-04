@@ -21,6 +21,7 @@ type WaveState = {
 
 class Wave extends PureComponent<WaveProps, WaveState> {
   private _animated: boolean;
+  private _key: string;
 
   constructor(props: WaveProps) {
     super(props);
@@ -29,6 +30,7 @@ class Wave extends PureComponent<WaveProps, WaveState> {
 
     this.state = { H, waveParams };
     this._animated = animated || false;
+    this._key = Math.random().toString(36).replace(/[^a-z]+/g, "").substr(0, 5);
   }
 
   componentDidMount() {
@@ -47,7 +49,7 @@ class Wave extends PureComponent<WaveProps, WaveState> {
         <svg
           key={i}
           style={{ width: 3 * T, height: A + H }}
-          className={`wave__item wave__item-${i + 1}`}
+          className={`wave__item ${this._key}_wave__item-${i + 1}`}
           preserveAspectRatio="xMinYMin meet"
           viewBox={`0 0 ${3 * T} ${A + H}`}
         >
@@ -83,7 +85,7 @@ class Wave extends PureComponent<WaveProps, WaveState> {
     } = this.props;
 
     for (let i = 0; i < waves.length; i++) {
-      const item = document.querySelector<SVGElement>(`.wave__item-${i + 1}`);
+      const item = document.querySelector<SVGElement>(`.${this._key}_wave__item-${i + 1}`);
 
       if (item) {
         const name = 'wave__animate';
@@ -104,7 +106,7 @@ class Wave extends PureComponent<WaveProps, WaveState> {
     const waves = this.state.waveParams;
 
     for (let i = 0; i < waves.length; i++) {
-      const item = document.querySelector<SVGElement>(`.wave__item-${i + 1}`);
+      const item = document.querySelector<SVGElement>(`.${this._key}_wave__item-${i + 1}`);
 
       if (item) {
         item.style.animation = '';
